@@ -1,6 +1,6 @@
 {
 	"name": "scratch-verify",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Verify the ownership of a Scratch account.",
 	"repository": "https://github.com/Richienb/scratch-verify.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",

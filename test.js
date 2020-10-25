@@ -1,13 +1,16 @@
 const test = require("ava")
-const theModule = require(".")
+const size = require("any-size")
+const stableFn = require("stable-fn")
+const scratchVerify = require(".")
 
-test("main", t => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number"
-	})
+test(".createCode()", t => {
+	t.false(stableFn(scratchVerify.createCode))
 
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+	const result = scratchVerify.createCode()
+	t.is(typeof result, "number")
+	t.is(size(result), 6)
+})
+
+test(".verify()", t => {
+	t.is(typeof scratchVerify.verify, "function")
 })

@@ -1,15 +1,39 @@
 /**
-My awesome module.
-@param input Lorem ipsum.
-@param postfix Lorem ipsum.
+Generate a verification code for the user to provide at https://scratch.mit.edu/projects/440710593. This is just a convenience method; you can use any numerical code.
+
+@returns A 6-digit number.
+
 @example
 ```
-const theModule = require("the-module")
+const scratchVerify = require("scratch-verify")
 
-theModule("unicorns")
-//=> "unicorns & rainbows"
+console.log(scratchVerify.createCode())
+//=> 4355436042
 ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string
+export declare function createCode(): string
 
-export = theModule
+/**
+Verify whether the user is authenticated.
+
+@param username The username to authenticate.
+@param code The code to check for.
+@returns Whether the user has authenticated.
+
+@example
+```
+const scratchVerify = require("scratch-verify")
+
+// If the user has authenticated
+console.log(await scratchVerify.verify("RichieNB", 4355436042))
+//=> true
+```
+*/
+export declare function verify(username: string, code: string | number, options?: {
+	/**
+	The maximum amount of milliseconds that can pass since the user provided the code before it is no longer accepted.
+
+	@default Infinity
+	*/
+	completionTimeout?: number
+}): Promise<boolean>

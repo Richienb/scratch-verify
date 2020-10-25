@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "scratch-verify",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Verify the ownership of a Scratch account.",
+	"repository": "https://github.com/Richienb/scratch-verify.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,11 +17,24 @@
 		"lint": "xo",
 		"test": "xo && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"scratch",
+		"verify",
+		"account",
+		"ownership",
+		"user"
+	],
+	"dependencies": {
+		"crypto-random-string": "^3.3.0",
+		"got": "^11.8.0"
+	},
 	"devDependencies": {
+		"any-size": "^1.2.0",
+		"ask-text": "^1.0.0",
 		"ava": "^3.13.0",
 		"eslint-config-richienb": "^0.5.0",
+		"p-wait-for": "^3.1.0",
+		"stable-fn": "^2.0.0",
 		"xo": "^0.33.1"
 	},
 	"xo": {

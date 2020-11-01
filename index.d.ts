@@ -25,7 +25,7 @@ Verify whether the user is authenticated.
 const scratchVerify = require("scratch-verify")
 
 // If the user has authenticated
-console.log(await scratchVerify.verify("RichieNB", 4355436042))
+console.log(await scratchVerify.verify("RichieNB", 435543))
 //=> true
 ```
 */

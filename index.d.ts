@@ -8,7 +8,7 @@ Generate a verification code for the user to provide at https://scratch.mit.edu/
 const scratchVerify = require("scratch-verify")
 
 console.log(scratchVerify.createCode())
-//=> 4355436042
+//=> 435543
 ```
 */
 export declare function createCode(): string

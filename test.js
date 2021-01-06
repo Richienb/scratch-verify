@@ -11,6 +11,6 @@ test(".createCode()", t => {
 	t.is(size(result), 6)
 })
 
-test(".verify()", t => {
-	t.is(typeof scratchVerify.verify, "function")
+test(".verifyCode()", t => {
+	t.is(typeof scratchVerify.verifyCode, "function")
 })

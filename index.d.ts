@@ -25,11 +25,11 @@ Verify whether the user is authenticated.
 const scratchVerify = require("scratch-verify")
 
 // If the user has authenticated
-console.log(await scratchVerify.verify("RichieNB", 435543))
+console.log(await scratchVerify.verifyCode("RichieNB", 435543))
 //=> true
 ```
 */
-export declare function verify(username: string, code: string | number, options?: {
+export declare function verifyCode(username: string, code: string | number, options?: {
 	/**
 	The maximum amount of milliseconds that can pass since the user provided the code before it is no longer accepted.
 

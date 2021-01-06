@@ -13,13 +13,13 @@ npm install scratch-verify
 ## Usage
 
 ```js
-const scratchVerify = require(".")
+const { createCode, verifyCode } = require("scratch-verify")
 
 // The user should go to https://scratch.mit.edu/projects/440710593 and provide `code`
-const code = scratchVerify.createCode()
+const code = createCode()
 
 // Verify if the user provided it
-const isVerified = await scratchVerify.verify(username, code)
+const isVerified = await verifyCode(username, code)
 ```
 
 ## API
@@ -35,7 +35,7 @@ console.log(scratchVerify.createCode())
 //=> 435543
 ```
 
-### scratchVerify.verify(username, code, options?)
+### scratchVerify.verifyCode(username, code, options?)
 
 Verify whether the user is authenticated.
 

@@ -7,7 +7,7 @@ module.exports = (async () => {
 	const code = scratchVerify.createCode()
 	console.log(`Go to https://scratch.mit.edu/projects/440710593 and provide the code ${code}`)
 
-	await pWaitFor(async () => scratchVerify.verify(username, code), { interval: 2500 })
+	await pWaitFor(async () => scratchVerify.verifyCode(username, code), { interval: 2500, leadingCheck: false })
 
 	console.log(`Verified as ${username}`)
 })()

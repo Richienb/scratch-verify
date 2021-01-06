@@ -11,7 +11,7 @@ exports.createCode = () => Number(cryptoRandomString({
 }))
 
 exports.verifyCode = async (username, code, { completionTimeout = Infinity } = {}) => {
-	const {data: cloudData} = await axios("https://clouddata.scratch.mit.edu/logs", {
+	const { data: cloudData } = await axios("https://clouddata.scratch.mit.edu/logs", {
 		params: {
 			projectid: 440710593,
 			limit: 1000,

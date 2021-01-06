@@ -25,8 +25,8 @@
 		"user"
 	],
 	"dependencies": {
-		"crypto-random-string": "^3.3.0",
-		"got": "^11.8.0"
+		"axios": "^0.21.1",
+		"crypto-random-string": "^3.3.0"
 	},
 	"devDependencies": {
 		"any-size": "^1.2.0",

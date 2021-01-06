@@ -1,5 +1,5 @@
 "use strict"
-const got = require("got")
+const axios = require("axios")
 const cryptoRandomString = require("crypto-random-string")
 
 exports.createCode = () => Number(cryptoRandomString({
@@ -11,14 +11,13 @@ exports.createCode = () => Number(cryptoRandomString({
 }))
 
 exports.verify = async (username, code, { completionTimeout = Infinity } = {}) => {
-	const cloudData = await got("https://clouddata.scratch.mit.edu/logs", {
-		searchParams: {
+	const {data: cloudData} = await axios("https://clouddata.scratch.mit.edu/logs", {
+		params: {
 			projectid: 440710593,
 			limit: 1000,
 			offset: 0
 		},
-		responseType: "json",
-		resolveBodyOnly: true
+		responseType: "json"
 	})
 
 	return cloudData.some(({ user, verb, name, value, timestamp }) => verb === "set_var" &&

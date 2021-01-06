@@ -7,7 +7,7 @@ test(".createCode()", t => {
 	t.false(stableFn(scratchVerify.createCode))
 
 	const result = scratchVerify.createCode()
-	t.is(typeof result, "number")
+	t.is(typeof result, "string")
 	t.is(size(result), 6)
 })
 

@@ -2,13 +2,10 @@
 const axios = require("axios")
 const cryptoRandomString = require("crypto-random-string")
 
-exports.createCode = () => Number(cryptoRandomString({
-	length: 1,
-	characters: "123456789"
-}) + cryptoRandomString({
-	length: 5,
+exports.createCode = () => cryptoRandomString({
+	length: 6,
 	type: "numeric"
-}))
+})
 
 exports.verifyCode = async (username, code, { completionTimeout = Infinity } = {}) => {
 	const { data: cloudData } = await axios("https://clouddata.scratch.mit.edu/logs", {

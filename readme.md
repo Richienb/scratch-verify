@@ -1,4 +1,4 @@
-# scratch-verify [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/scratch-verify/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/scratch-verify)
+# scratch-verify
 
 Verify the ownership of a Scratch account.
 

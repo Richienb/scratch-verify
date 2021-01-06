@@ -32,7 +32,7 @@ Generate a verification code for the user to provide at https://scratch.mit.edu/
 const scratchVerify = require("scratch-verify")
 
 console.log(scratchVerify.createCode())
-//=> 435543
+//=> "435543"
 ```
 
 ### scratchVerify.verifyCode(username, code, options?)
@@ -66,6 +66,6 @@ The maximum amount of milliseconds that can pass since the user provided the cod
 const scratchVerify = require("scratch-verify")
 
 // If the user has authenticated
-console.log(await scratchVerify.verify("RichieNB", 435543))
+console.log(await scratchVerify.verify("RichieNB", "435543"))
 //=> true
 ```

@@ -20,6 +20,6 @@ exports.verifyCode = async (username, code, { completionTimeout = Infinity } = {
 	return cloudData.some(({ user, verb, name, value, timestamp }) => verb === "set_var" &&
 		name === "☁ Verification code" &&
 		user === username &&
-		value === code.toString() &&
+		value === code &&
 		timestamp >= Date.now() - completionTimeout)
 }

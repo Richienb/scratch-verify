@@ -18,6 +18,7 @@ Verify whether the user is authenticated.
 
 @param username The username to authenticate.
 @param code The code to check for.
+
 @returns Whether the user has authenticated.
 
 @example

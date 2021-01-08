@@ -47,7 +47,7 @@ The username to authenticate.
 
 #### code
 
-Type: `string | number`
+Type: `string`
 
 The code to check for.
 

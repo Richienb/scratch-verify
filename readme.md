@@ -26,7 +26,7 @@ const isVerified = await verifyCode(username, code)
 
 ### scratchVerify.createCode()
 
-Generate a verification code for the user to provide at https://scratch.mit.edu/projects/440710593. This is just a convenience method; you can use any numerical code. Returns a 6-digit number.
+Generate a verification code for the user to provide at https://scratch.mit.edu/projects/440710593. This is just a convenience method - you can use any numerical code. Returns a 6-digit number.
 
 ```js
 const scratchVerify = require("scratch-verify")

@@ -69,3 +69,7 @@ const scratchVerify = require("scratch-verify")
 console.log(await scratchVerify.verify("RichieNB", "435543"))
 //=> true
 ```
+
+## Related
+
+- [scratch-verify-python](https://github.com/Richienb/scratch-verify-python) - Python version.

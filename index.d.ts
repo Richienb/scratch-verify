@@ -1,5 +1,5 @@
 /**
-Generate a verification code for the user to provide at https://scratch.mit.edu/projects/440710593. This is just a convenience method; you can use any numerical code.
+Generate a verification code for the user to provide at https://scratch.mit.edu/projects/440710593. This is just a convenience method - you can use any numerical code.
 
 @returns A 6-digit number.
 

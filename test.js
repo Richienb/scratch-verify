@@ -6,9 +6,9 @@ const scratchVerify = require(".")
 test(".createCode()", t => {
 	t.false(stableFn(scratchVerify.createCode))
 
-	const result = scratchVerify.createCode()
-	t.is(typeof result, "string")
-	t.is(size(result), 6)
+	const code = scratchVerify.createCode()
+	t.is(typeof code, "string")
+	t.is(size(code), 6)
 })
 
 test(".verifyCode()", t => {
